@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Appbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:elevation="0dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_gravity="start|center_vertical"
+            android:src="@drawable/ic_back" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/btnBookmark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="28dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_bookmark" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/toolbar"
+        android:background="@color/colorDivider" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_below="@+id/toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar"
+            android:background="@color/white"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/articleSource"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Source"
+                android:fontFamily="@font/archivo_bold"
+                android:textColor="@color/black_200"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/articleDateTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/articleSource"
+                android:layout_marginBottom="16dp"
+                android:text="date"
+                android:fontFamily="@font/archivo"
+                android:textColor="@color/black_200"
+                android:textSize="14sp" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/articleImage"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_below="@id/articleDateTime"
+                android:layout_marginBottom="8dp"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/roundedCorners" />
+
+            <Space
+                android:id="@+id/space1"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_below="@id/articleImage" />
+
+            <TextView
+                android:id="@+id/articleAuthor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/space1"
+                android:text="Author"
+                android:fontFamily="@font/archivo"
+                android:textAllCaps="true"
+                android:textColor="@color/primaryColor"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/articleTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/articleAuthor"
+                android:layout_marginTop="6dp"
+                android:text="Title"
+                android:fontFamily="@font/archivo_bold"
+                android:textColor="@color/black_200"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <Space
+                android:id="@+id/space2"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_below="@id/articleTitle" />
+
+            <TextView
+                android:id="@+id/articleContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/space2"
+                android:text="Content"
+                android:fontFamily="@font/archivo"
+                android:textColor="@color/black_200"
+                android:textSize="14sp"/>
+        </RelativeLayout>
+
+    </ScrollView>
+</RelativeLayout>
