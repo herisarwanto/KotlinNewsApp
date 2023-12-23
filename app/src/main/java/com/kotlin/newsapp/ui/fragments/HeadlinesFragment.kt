@@ -86,7 +86,7 @@ class HeadlinesFragment : Fragment(R.layout.fragment_headlines) {
             }
         })
 
-        retryButton.setOnClickListener {
+        binding.itemHeadlinesError.retryButton.setOnClickListener {
             newsViewModel.getHeadlinesNews("us")
         }
     }

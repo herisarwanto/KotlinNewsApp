@@ -104,7 +104,7 @@ class SearchFragment : Fragment(R.layout.fragment_search) {
             }
         })
 
-        retryButton.setOnClickListener {
+        binding.itemSearchError.retryButton.setOnClickListener {
             if (binding.searchEdit.toString().isNotEmpty()) {
                 newsViewModel.searchNews(binding.searchEdit.text.toString())
             } else {
