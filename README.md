@@ -10,8 +10,8 @@ Aplikasi ini memungkinkan pengguna untuk melihat topik berita utama dan melakuka
 
 ![Screenshot 1](https://i.imgur.com/6zDp7ky.png)
 ![Screenshot 2](https://i.imgur.com/bvM4o6z.png)
-![Screenshot 3](https://imgur.com/bvM4o6z)
-![Screenshot 4](https://imgur.com/wPkDaSj)
+![Screenshot 3](https://i.imgur.com/wPkDaSj.png)
+![Screenshot 4](https://i.imgur.com/CNMWkVQ.png)
 
 ## Fitur Utama
 
