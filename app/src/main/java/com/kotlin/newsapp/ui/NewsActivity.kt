@@ -14,7 +14,7 @@ import com.kotlin.newsapp.repository.remote.NewsRemoteRepository
 class NewsActivity : AppCompatActivity() {
 
     lateinit var newsViewModel: NewsViewModel
-    lateinit var binding: ActivityNewsBinding
+    private lateinit var binding: ActivityNewsBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,7 +27,7 @@ class NewsActivity : AppCompatActivity() {
             NewsViewModelProviderFactory(application, newsRemoteRepository, newsLocalRepository)
 
         newsViewModel =
-            ViewModelProvider(this, viewModelProviderFactory).get(NewsViewModel::class.java)
+            ViewModelProvider(this, viewModelProviderFactory)[NewsViewModel::class.java]
 
         val navHostFragment =
             supportFragmentManager.findFragmentById(R.id.newsNavHostFragment) as NavHostFragment

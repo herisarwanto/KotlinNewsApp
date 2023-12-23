@@ -20,19 +20,19 @@ import java.io.IOException
 
 class NewsViewModel(
     app: Application,
-    val newsRemoteRepository: NewsRemoteRepository,
+    private val newsRemoteRepository: NewsRemoteRepository,
     val newsLocalRepository: NewsLocalRepository
 ) :
     AndroidViewModel(app) {
     val headlines: MutableLiveData<Resource<NewsResponse>> = MutableLiveData()
     var headlinesPage = 1
-    var headlinesResponse: NewsResponse? = null
+    private var headlinesResponse: NewsResponse? = null
 
     val searchNews: MutableLiveData<Resource<NewsResponse>> = MutableLiveData()
     var searchNewsPage = 1
-    var searchNewsResponse: NewsResponse? = null
-    var newSearchQuery: String? = null
-    var oldSearchQuery: String? = null
+    private var searchNewsResponse: NewsResponse? = null
+    private var newSearchQuery: String? = null
+    private var oldSearchQuery: String? = null
 
     private val _isArticleSaved = MutableLiveData<Boolean>()
     val isArticleSaved: LiveData<Boolean> get() = _isArticleSaved
@@ -94,11 +94,7 @@ class NewsViewModel(
 
     fun getFavoriteNews() = newsLocalRepository.getFavoriteNews()
 
-    fun getFavoriteNewsByPublishedAt(publishedAt: String): LiveData<Article> {
-        return newsLocalRepository.getFavoriteNewsByPublishedAt(publishedAt)
-    }
-
-    fun handleArticleStatus(publishedAt: String) {
+    fun getFavoriteNewsByPublishedAt(publishedAt: String) {
         newsLocalRepository.getFavoriteNewsByPublishedAt(publishedAt).observeForever { article ->
             if (article?.id != null) {
                 updateArticleSaveStatus(true)
@@ -107,10 +103,6 @@ class NewsViewModel(
             }
         }
     }
-
-//    fun deleteArticle(article: Article) = viewModelScope.launch {
-//        newsLocalRepository.deleteArticle(article)
-//    }
 
     fun deleteArticle(article: Article) = viewModelScope.launch {
         try {
@@ -186,7 +178,7 @@ class NewsViewModel(
         }
     }
 
-    fun updateArticleSaveStatus(newValue: Boolean) {
+    private fun updateArticleSaveStatus(newValue: Boolean) {
         _isArticleSaved.value = newValue
     }
 }

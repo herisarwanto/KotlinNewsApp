@@ -64,7 +64,7 @@ class ArticleFragment : Fragment(R.layout.fragment_article) {
             }
         }
 
-        newsViewModel.handleArticleStatus(article.publishedAt ?: "")
+        newsViewModel.getFavoriteNewsByPublishedAt(article.publishedAt ?: "")
 
         newsViewModel.isArticleSaved.observe(viewLifecycleOwner) { status ->
             if (status) {
