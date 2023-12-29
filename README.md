@@ -1,43 +1,40 @@
 # News App
 
-Aplikasi berita sederhana yang dibangun menggunakan Kotlin dan beberapa teknologi utama seperti MVVM, Retrofit, Navigation Components, Coroutines, dan Room Databases.
+A simple news application built using Kotlin and several key technologies such as MVVM, Retrofit, Navigation Components, Coroutines, and Room Databases.
 
-## Deskripsi Singkat
+## Brief Description
 
-Aplikasi ini memungkinkan pengguna untuk melihat topik berita utama dan melakukan pencarian berita. Selain itu, pengguna dapat menyimpan berita favorit secara lokal.
+This application allows users to view top news headlines and perform news searches. Additionally, users can locally save their favorite news articles.
 
-## Screenshot
+## Screenshots
 
 ![Screenshot 1](https://i.imgur.com/6zDp7ky.png)
 ![Screenshot 2](https://i.imgur.com/bvM4o6z.png)
 ![Screenshot 3](https://i.imgur.com/wPkDaSj.png)
 ![Screenshot 4](https://i.imgur.com/CNMWkVQ.png)
 
-## Fitur Utama
+## Key Features
 
-- Tampilan Top Headlines
-- Fitur Pencarian Berita
-- Penyimpanan Lokal Berita Favorit
+- Top Headlines Display
+- News Search Feature
+- Local Storage of Favorite News
 
-## Teknologi Utama yang Digunakan
+## Key Technologies Used
 
-- **MVVM**: Arsitektur desain untuk memisahkan logika bisnis dari tampilan.
-- **Retrofit**: Library HTTP untuk mengambil data dari RESTful API.
-- **Navigation Components**: Memfasilitasi navigasi antar-destinasi dalam aplikasi.
-- **Coroutines**: Untuk pemrograman asynchronous yang lebih mudah dan ringan.
-- **Room Databases**: Database SQLite dengan lapisan abstraksi yang kuat.
+- **MVVM**: Design architecture to separate business logic from the view.
+- **Retrofit**: HTTP library for fetching data from RESTful APIs.
+- **Navigation Components**: Facilitates navigation between destinations within the app.
+- **Coroutines**: For easier and lightweight asynchronous programming.
+- **Room Databases**: SQLite database with a robust abstraction layer.
 
-## Sumber Data
+## Data Source
 
-Aplikasi ini menggunakan sumber data dari [NewsAPI.org](https://newsapi.org/).
+This application utilizes data from [NewsAPI.org](https://newsapi.org/).
 
-## Cara Menggunakan
+## How to Use
 
-1. Dapatkan API Key dari [NewsAPI.org](https://newsapi.org/) dan letakkan di file `api_keys.xml`.
-2. Clone repositori ini.
-3. Buka proyek menggunakan Android Studio.
-4. Jalankan aplikasi pada emulator atau perangkat fisik Anda.
+1. Obtain an API Key from [NewsAPI.org](https://newsapi.org/) and place it in the `api_keys.xml` file.
+2. Clone this repository.
+3. Open the project using Android Studio.
+4. Run the application on your emulator or physical device.
 
-## Pengembang
-
-- [GitHub](https://github.com/herisarwanto)
